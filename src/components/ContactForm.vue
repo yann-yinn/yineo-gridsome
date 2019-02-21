@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import { sendMail } from '~/services/sendgrid'
+import { sendMail } from '@/services/sendgrid'
 export default {
   data() {
     return {
