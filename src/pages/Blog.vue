@@ -1,22 +1,14 @@
 <template>
   <MainLayout class="home">
-    <ul>
-      <li v-for="{ node } in $page.allBlogPost.edges" :key="node._id">
-        <router-link :to="node.path">
-          <h2 v-html="node.title"/>
-        </router-link>
-        <span v-html="node.date"/>
-        <ul><li v-for="tag in node.tags" :key="tag.id">
-          <router-link :to="tag.path">{{tag.name}}</router-link></li></ul>
-      </li>
-    </ul>
+    <Posts :posts="$page.allBlogPost.edges.map(e => e.node)"/>
   </MainLayout>
 </template>
 
 <script>
 import MainLayout from "@/layouts/MainLayout"
+import Posts from '@/components/Posts.vue'
 export default {
-  components: { MainLayout }
+  components: { MainLayout, Posts }
 }
 </script>
 
@@ -27,6 +19,8 @@ export default {
         node {
           title
           path
+          content
+          image
           tags {
             name
             id

@@ -1,11 +1,11 @@
 <!-- Post list as teasers -->
 <template>
   <section class="posts section">
-    <div v-for="post in posts" class="post" :key="post.$slug">
+    <div v-for="post in posts" class="post" :key="post.slug">
       <div class="columns">
         <div class="column is-one-quarter">
           <div class="image-wrapper has-text-centered">
-            <img v-if="post.image" v-lazy="post.image">
+            <g-image v-if="post.image" :src="post.image" />
           </div>
         </div>
 
@@ -13,13 +13,13 @@
           <nuxt-link class="title is-3" :to="{ name: 'blog-slug', params: { slug: post.$slug } }">
             <h2 v-html="post.title"></h2>
           </nuxt-link>
-          <PostDate :date="post.$date"/>
+          <PostDate :date="post.date"/>
 
-          <div class="content" v-html="striptags(post.$html).substr(0, 300) + '...'"></div>
+          <div class="content" v-html="striptags(post.content).substr(0, 300) + '...'"></div>
 
           <div>
             <BulmaButtonLink
-              :to="{ name: 'blog-slug', params: { slug: post.$slug } }"
+              :to="post.path"
             >Lire l'article</BulmaButtonLink>
           </div>
         </div>
