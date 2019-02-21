@@ -21,6 +21,7 @@ export default {
           path
           content
           image
+          date(format: "D MMMM, YYYY")
           tags {
             name
             id

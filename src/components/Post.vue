@@ -11,8 +11,8 @@
 
     <div class="container is-narrow">
       <section class="post section">
-        <PostDate :date="post.$date"/>
-        <div v-html="post.$html" class="content"></div>
+        <PostDate :date="post.date"/>
+        <div v-html="post.content" class="content"></div>
         <TagLinks v-if="post.tags" :tags="post.tags"/>
       </section>
     </div>
@@ -22,7 +22,6 @@
 <script>
 import PostDate from './PostDate'
 import TagLinks from './TagLinks'
-import tags from 'static/api/tags.json'
 export default {
   components: { PostDate, TagLinks },
   props: {

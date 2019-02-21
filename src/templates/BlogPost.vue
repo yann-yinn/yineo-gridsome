@@ -1,34 +1,30 @@
 <template>
-  <MainLayout>
-    <div class="article">
-      <h1>{{ $page.blogPost.title }}</h1>
-      <span>{{ $page.blogPost.date }}</span>
-      <img :src="$page.blogPost.fields.image">
-      <div class="content" v-html="$page.blogPost.content"/>
-    </div>
-  </MainLayout>
+  <PostLayout>
+    <Post v-if="$page.post" :post="$page.post"/>
+  </PostLayout>
 </template>
 
 <script>
-import MainLayout from '@/layouts/MainLayout'
+import PostLayout from '@/layouts/PostLayout'
+import Post from '@/components/Post'
 export default {
-  components: { MainLayout },
-  metaInfo() {
-    return {
-      title: this.$page.blogPost.title
-    }
+  components: {
+    PostLayout,
+    Post 
   }
 }
 </script>
 
 <page-query>
   query BlogPost ($path: String!) {
-    blogPost (path: $path) {
+    post: blogPost (path: $path) {
       title
       date (format: "D MMMM, YYYY")
       content
-      fields {
-        image
+      image
+      tags {
+        id
+        name
       }
     }
   }

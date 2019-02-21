@@ -2,7 +2,7 @@
   <nav v-if="totalPages > 1" class="pagination is-centered">
     <ul class="pagination-list">
       <li :key="n" v-for="n in totalPages">
-        <nuxt-link class="pagination-link" :to="{ name: getRouteName, query:{ page: n } }">{{ n }}</nuxt-link>
+        <router-link class="pagination-link" :to="{ name: getRouteName, query:{ page: n } }">{{ n }}</router-link>
       </li>
     </ul>
   </nav>

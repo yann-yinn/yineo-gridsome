@@ -34,10 +34,9 @@
 <script>
 import striptags from 'striptags'
 import BulmaButtonLink from './BulmaButtonLink'
-import Pagination from './Pagination'
 import PostDate from './PostDate'
 export default {
-  components: { Pagination, BulmaButtonLink, PostDate },
+  components: { BulmaButtonLink, PostDate },
   props: {
     posts: { type: Array, required: true }
   },

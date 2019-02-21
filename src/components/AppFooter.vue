@@ -7,12 +7,12 @@
       <div class="columns has-text-centered">
         <div class="column">
           <div class="logo-image-wrapper">
-            <img class="logo-image" src="/images/logo-nuxt.png">
+            <img class="logo-image" src="/images/logo-gridsome.png">
           </div>
           <div class="logo-title">
-            <a href="https://nuxtjs.org/">Nuxt.js</a>
+            <a href="https://gridsome.org">GRIDSOME</a>
           </div>
-          <div class="logo-description">Universal Vue.js Applications</div>
+          <div class="logo-description">Vue.js JAMStack Framework</div>
         </div>
       </div>
     </div>

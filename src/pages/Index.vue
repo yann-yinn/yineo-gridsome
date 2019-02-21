@@ -41,6 +41,7 @@ export default {
           image
           content
           path
+          date(format: "D MMMM, YYYY")
         }
       }
     }
