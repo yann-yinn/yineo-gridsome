@@ -1,7 +1,7 @@
 ---
 title: REACT + GRAPHQL + WORDPRESS = REACTPRESS 💛
-slug: react-wordpress-reactpress
 image: /images/main-image-react-wordpress.jpeg
+date: 2018-07-02
 tags:
   - react
   - next

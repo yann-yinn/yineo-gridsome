@@ -1,6 +1,6 @@
 ---
 title: 'Retour d’expérience : 4 erreurs à ne pas faire en architecturant une application web React ou Vue'
-slug: retour-dexperience-3-erreurs-a-ne-pas-faire-en-architecturant-une-application-web-react-ou-vue.md
+date: 2018-04-02
 tags:
   - vue
   - graphql

@@ -1,7 +1,7 @@
 ---
 title: React ou Vue.js ? les deux mon capitaine.
-slug: react-ou-vue-js-osef-les-deux-sont-formidables
 image: /images/main-image-react-vs-vue.jpeg
+date: 2018-04-23
 tags:
   - react
   - vue

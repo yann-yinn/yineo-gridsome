@@ -1,7 +1,7 @@
 ---
 title: Configurer un dédié avec Nginx avec certificat ssl renouvelable pour une application Node.js
-slug: configurer-un-dedie-avec-nginx-avec-certificat-ssl-renouvelable-pour-une-application-node-js
 image: /images/main-image-nginx.jpeg
+date: 2018-05-02
 tags:
   - node
 ---

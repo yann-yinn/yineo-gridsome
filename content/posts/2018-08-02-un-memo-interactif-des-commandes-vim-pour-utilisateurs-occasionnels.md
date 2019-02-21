@@ -1,7 +1,7 @@
 ---
 title: Un mémo interactif des commandes Vim
-slug: un-memo-interactif-des-commandes-vim-pour-utilisateurs-occasionnels
 image: /images/main-image-vim-memo.jpeg
+date: 2018-08-02
 tags:
   - vue
 ---

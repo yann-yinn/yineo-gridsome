@@ -5,7 +5,11 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Yineo - développeur freelance à Nantes spécialisé Vue.js, Nuxt, Gridsome, GraphQL',
+  homepageTitle: 'Yann Boisselier',
+  homepageSubtitle: 'développeur freelance à Nantes spécialisé Vue.js, Nuxt, Gridsome, GraphQL',
+  mail: 'yann@yineo.fr',
+  telephone: '06 32 70 37 58',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -27,6 +31,13 @@ module.exports = {
         path: 'content/tags/*.md',
         typeName: 'Tag',
         route: '/tag/:id'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/blocks/*.md',
+        typeName: 'Block'
       }
     }
   ]
