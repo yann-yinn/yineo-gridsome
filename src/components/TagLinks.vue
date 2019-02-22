@@ -2,8 +2,8 @@
 <template>
   <div class="tags">
     <ul>
-      <li class="tag is-medium is-light" v-for="tag in tags" :key="tag.$slug">
-        <nuxt-link :to="{ name: 'tag-slug', params: { slug: tag.$slug } }">{{tag.name}}</nuxt-link>
+      <li class="tag is-medium is-light" v-for="tag in tags" :key="tag.id">
+        <router-link :to="tag.path">{{tag.name}}</router-link>
       </li>
     </ul>
   </div>

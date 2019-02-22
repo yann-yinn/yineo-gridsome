@@ -1,5 +1,5 @@
 <template>
-  <MainLayout class="home">
+  <MainLayout class="page-cv">
     <div class="section">
       <div class="content" v-html="$page.cv.content"></div>
     </div>
@@ -30,3 +30,9 @@ export default {
     }
   }
 </page-query>
+
+<style>
+.page-cv span.icon{
+  width: 0 !important;
+}
+</style>

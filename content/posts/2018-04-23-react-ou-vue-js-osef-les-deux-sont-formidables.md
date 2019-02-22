@@ -1,12 +1,11 @@
 ---
 title: React ou Vue.js ? les deux mon capitaine.
 image: /images/main-image-react-vs-vue.jpeg
-date: 2018-04-23
-tags:
-  - react
-  - vue
-  - nuxt
-  - next
+tags_ids:
+  - react.md
+  - vue.md
+  - nuxt.md
+  - next.md
 ---
 
 On croise régulièrement des billets ou des discussions en mode : **Vue.js** versus **React**; avec une ferveur digne de la bataille : _The Beatles_ contre les _The Rolling Stones_. Un débat assez stérile en général, les deux technologies étant toutes deux un très bon choix pour le front-end. (les hasards des projets et les préférences personnelles ont fini par faire que j'utilise plutôt **Vue.js** au quotidien, notamment parce que j'adore le framework [**Nuxt.js**](https://nuxtjs.org/) )

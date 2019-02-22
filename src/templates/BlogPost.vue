@@ -25,6 +25,7 @@ export default {
       tags {
         id
         name
+        path
       }
     }
   }
