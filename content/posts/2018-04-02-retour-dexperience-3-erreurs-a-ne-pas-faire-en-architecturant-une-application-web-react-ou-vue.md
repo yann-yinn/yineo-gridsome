@@ -1,10 +1,12 @@
 ---
 title: 'Retour d’expérience : 4 erreurs à ne pas faire en architecturant une application web React ou Vue'
+slug: retour-dexperience-3-erreurs-a-ne-pas-faire-en-architecturant-une-application-web-react-ou-vue
+date: 2018-04-02
 tags_ids:
-  - vue.md
-  - graphql.md
-  - react.md
-  - rest.md
+  - vue
+  - graphql
+  - react
+  - rest
 ---
 
 ## 1 – l’API : La clef de voûte des clients

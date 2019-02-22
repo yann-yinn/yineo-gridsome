@@ -1,7 +1,9 @@
 ---
 title: 'conseils en vrac pour le télétravail'
+slug: '12-astuces-pour-mieux-teletravailler'
+date: 2016-07-20
 tags_ids:
-  - freelance.md
+  - freelance
 ---
 
 Après avoir expérimenté pendant environ un an le télétravail, je vous livre ici quelques astuces que je n’applique évidemment pas. Mais ne pas appliquer ses propres conseils n’a jamais empêcher personne de faire chier les autres avec; et c’est précisément ce que je compte vous faire subir.

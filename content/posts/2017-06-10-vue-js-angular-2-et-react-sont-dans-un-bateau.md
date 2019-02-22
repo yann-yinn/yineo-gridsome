@@ -1,7 +1,9 @@
 ---
 title: 'A la découverte de Vue.js'
+slug: vue-js-angular-2-et-react-sont-dans-un-bateau
+date:  2017-06-10
 tags_ids:
-  - vue.md
+  - vue
 ---
 
 La journée de vendredi a été consacrée à la découverte de la librairie **Vue.js**. Il s’agit une librairie orientée “composants réactifs” à l’instar de _React_ de facebook. Depuis quelques temps j’hésite pour la suite à monter en compétence sur Angular 2, React ou Vue.js.

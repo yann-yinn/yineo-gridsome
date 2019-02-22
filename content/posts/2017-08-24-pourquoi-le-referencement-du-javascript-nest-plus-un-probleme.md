@@ -1,9 +1,11 @@
 ---
 title: Pourquoi le référencement du JavaScript n’est plus un problème
+slug: pourquoi-le-referencement-du-javascript-nest-plus-un-probleme
+date: 2017-08-24
 tags_ids:
-  - nuxt.md
-  - vue.md
-  - wordpress.md
+  - nuxt
+  - vue
+  - wordpress
 ---
 
 Quand je suis arrivé à Nantes, je me suis dit qu’il serait bien que je crée un blog pour qu’on puisse trouver mes services sur internet. J’avais alors très peu de temps pour le faire, j’ai donc opté pour wordpress.com : pas d’hébergement à gérer, belle interface de rédaction et gratuit. Mais le site grandissant peu à peu, j’ai eu besoin de reprendre le contrôle total de mes pages, avec comme contrainte forte de garder le référencement durement acquis sur l’année précédente, une source majeure de contacts en tant que freelance.

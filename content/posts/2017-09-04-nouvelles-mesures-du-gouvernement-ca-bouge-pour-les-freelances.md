@@ -1,10 +1,9 @@
 ---
 title: 'Nouvelles mesures du gouvernement : ça bouge pour les freelances'
+slug: nouvelles-mesures-du-gouvernement-ca-bouge-pour-les-freelances
+date: 2017-09-04
 tags_ids:
-  - freelance.md
-  - indépendant.md
-  - micro-entreprise.md
-  - rsi.md
+  - freelance
 ---
 
 Ca bouge pour les indépendants et freelances, le gouvernement se propose de supprimer le RSI, cet organisme dont les cafouillages passés ont crée de véritables traumatismes chez les indépendants et les commerçants, et fait basculer des vies de manière kafkaïenne. Mais en voulant changer en quelques mois seulement le régime des indépendants, ne commet-on pas la même erreur qu’on a commise en créant le RSI à la va-vite ?

@@ -1,7 +1,9 @@
 ---
 title: 'Node.js : Module.exports vs exports'
+slug: node-js-module-exports-vs-exports
+date: 2017-06-10
 tags_ids:
-  - node.md
+  - node
 ---
 
 En node,`exports` est une notation raccourcie pour `module.exports`. En coulisse, `exports` est simplement une référence à `module.exports`.

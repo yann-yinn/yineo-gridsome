@@ -1,8 +1,10 @@
 ---
 title: Configurer un dédié avec Nginx avec certificat ssl renouvelable pour une application Node.js
 image: /images/main-image-nginx.jpeg
+slug: configurer-un-dedie-avec-nginx-avec-certificat-ssl-renouvelable-pour-une-application-node-js
+date: 2018-05-02
 tags_ids:
-  - node.md
+  - node
 ---
 
 Besoin de configurer vous-même **httpS** sur un dédié pour vos applications **Node.js** ? L’exemple ci-dessous utilise [certbot](https://certbot.eff.org), qui déploie des certificats ssl de [Let’s Encrypt](https://letsencrypt.org/) et ajoute automatiquement une tâche cron pour que le certificat ssl soit renouvelé automatiquement. Je ne suis pas du tout expert en Nginx, mais si jamais ça peut aider quelqu'un à débrouissailler la problématique, voici comment j'ai procédé:

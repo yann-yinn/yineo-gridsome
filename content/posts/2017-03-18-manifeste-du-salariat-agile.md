@@ -1,7 +1,9 @@
 ---
 title: Manifeste du salariat agile
+slug: manifeste-du-salariat-agile
+date: 2017-03-18
 tags_ids:
-  - entreprise-libérée.md
+  - entreprise-liberee
 ---
 
 Le salariat est régi dans son ensemble aujourd’hui par un système organisationnel hérité des débuts de l’ère industrielle. Les responsabilités sont organisées en couches hermétiques et opaques où les salarié-e-s au bas de l’échelle sont incité-e-s à se comporter de manière précise, docile et servile à une tâche très précisément affectée plutôt qu’à contribuer pro-activement aux valeurs de l’entreprise si ils en ont le désir. Valeurs auxquelles ils ne peuvent donc pas adhérer faute d’y participer réellement, et auxquelles on leur demande pourtant de s’identifier.

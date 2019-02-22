@@ -1,7 +1,9 @@
 ---
 title: Maîtriser la portée des variables en JavaScript ES6
+slug: la-portee-des-variables-en-ecma-script-6
+date: 2017-06-10
 tags_ids:
-  - javascript.md
+  - javascript
 ---
 
 Il existe 3 mots-clefs pour déclarer une variable en JavaScript à partir d’ES6 ou ECMAScript 2015 :

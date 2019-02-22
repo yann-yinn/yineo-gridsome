@@ -1,7 +1,9 @@
 ---
 title: 'L’entreprise libérée, ce truc de bisounours'
+slug: lentreprise-liberee-ce-truc-de-bisounours-partie-1
+date: 2017-04-03
 tags_ids:
-  - entreprise-libérée.md
+  - entreprise-liberee
 ---
 
 Depuis quelques semaines je m’intéresse aux “entreprises libérées“. Pas parce que je rêve d’un monde de bisounours où l’on travaille 4 heures par semaine et où l’on fait caca des arcs-en-ciel après avoir mangé des paillettes à midi, mais parce que j’ai le sentiment que c’est là une opportunité de résoudre des problèmes que j’ai pu observer dans de nombreuses entreprises organisée de manière “classique”. Plutôt que de gloser sur la théorie et de ce que veut dire “entreprise libérée”, je vais vous partager quelques anecdotes de ma vie professionnelle. Partons du terrain et voyons ce qui peut être amélioré, on verra ensuite si l’entreprise libérée et les nombreux concepts qui gravitent autour peuvent apporter des solutions concrètes à des problèmes concrets.

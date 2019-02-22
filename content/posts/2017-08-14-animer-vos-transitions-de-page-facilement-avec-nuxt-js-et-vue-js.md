@@ -1,8 +1,10 @@
 ---
 title: Animer vos transitions de page facilement avec Nuxt.js et Vue.js
+slug: animer-vos-transitions-de-page-facilement-avec-nuxt-js-et-vue-js
+date: 2017-08-14
 tags_ids:
-  - nuxt.md
-  - vue.md
+  - nuxt
+  - vue
 ---
 
 Vue.js dispose d’un composant transition très pratique pour créer des animations css (ou JavaScript) lorsqu’un composant apparait ou disparait. Ce qui nous permet de créer très facilement avec Nuxt.js des effets de transition pour nos pages.

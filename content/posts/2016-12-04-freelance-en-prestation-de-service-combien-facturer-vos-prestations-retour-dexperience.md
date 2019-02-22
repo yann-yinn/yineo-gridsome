@@ -1,7 +1,9 @@
 ---
 title: Freelance en prestation de service – combien facturer vos prestations ? Retour d’expérience
+slug: freelance-en-prestation-de-service-combien-facturer-vos-prestations-retour-dexperience
+date: 2016-12-04
 tags_ids:
-  - freelance.md
+  - freelance
 ---
 
 > **NOTA BENE** : les chiffres présentés, notamment le tarif journalier calculé à la fin ainsi que le nombre de jours de production réels annuels ici ne sont que des **exemples**. Le but de l’article est en priorité de vous montrer comment créer vos propres repères pour pouvoir calculer le votre tarif journalier en fonction de votre situation personnelle. Les choses seront en effet très différente en fonction de votre activité, de votre manière de la pratiquer, de votre expertise, de votre clientèle, de votre statut jurique etc. Il n'y a **pas** de réponse universelle.

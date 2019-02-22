@@ -1,7 +1,9 @@
 ---
 title: 'PASSER DE PHP A REACT : PAR OÙ COMMENCER ?'
+slug: passer-de-php-a-react-par-ou-commencer
+date: 2017-11-19
 tags_ids:
-  - react.md
+  - react
 ---
 
 Si vous venez de PHP et que voulez vous mettre à _React_, par quel bout attraper tout ça ? Si vous avez le choix, je vous recommande chaleureusement de faire une journée de formation avec un ami ou de passer en junior sur un projet React, ça vous fera gagner énormément de temps. Si vous souhaitez faire le chemin seul, voici quelques indications qui vous feront sans doute gagner pas mal de temps.

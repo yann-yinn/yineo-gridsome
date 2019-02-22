@@ -1,10 +1,12 @@
 ---
 title: GraphCMS – Un back-office en quelques minutes pour administrer les contenus de votre application React ou Next.
+slug: graphcms-un-back-office-en-quelques-minutes-pour-administrer-les-contenus-de-votre-application-react-ou-next
+date: 2018-04-01
 tags_ids:
-  - graphcms.md
-  - graphql.md
-  - next.md
-  - react.md
+  - graphcms
+  - graphql
+  - next
+  - react
 ---
 
 Faire un site en React c’est chouette. Faire un site React SEO-friendly, c’est mieux (J’utiliserai ici _Next.js_ pour le côté SEO-friendly). Faire un site React SEO-friendly avec un back-office qui sert le contenu en graphQL, c’est encore mieux. Mais quel back office utiliser quand on doit permettre à autrui de modifier les contenus et médias de son application ? Puisqu’aujourd’hui j’utilise systématiquement _GraphQL_, [GraphCMS](https://graphcms.com/) avait particulièrement attiré mon attention il y a quelques mois. Il s’avère que brancher un back-office _GraphCMS_ à votre appli React est vraiment très simple. A ce jour, C’est gratuit dans la limite de 10 000 requêtes mensuelles. A noter qu’il prévoit de devenir open source dans le “premier quart 2018”, donc potentiellement possible à héberger soi-même.

@@ -1,8 +1,10 @@
 ---
 title: 'Devenir un ninja du JavaScript avec funfunfunction'
+slug: une-reference-pour-devenir-un-ninja-du-javascript-funfunfunction
+date: 2017-07-25
 tags_ids:
-  - javascript.md
-  - vue.md
+  - javascript
+  - vue
 ---
 
 Jusqu’ici freelance en PHP et Drupal, je me débrouillais en JavaScript et en Angular premier du nom sans toutefois être un caïd. Il y a quelques mois j’ai eu envie de lâcher définitivement PHP pour prendre le chemin de l’expertise JavaScript. Mais JavaScript est un territoire immense aux ramifications complexes, et j’ai mis du temps à trouver les bonnes sources d’informations pour appréhender et maitriser les sujets fondamentaux.

@@ -1,8 +1,10 @@
 ---
 title: Un mémo interactif des commandes Vim
 image: /images/main-image-vim-memo.jpeg
+slug: un-memo-interactif-des-commandes-vim-pour-utilisateurs-occasionnels
+date: 2018-08-02
 tags_ids:
-  - vim.md
+  - vim
 ---
 
 J'aime bien _Vim_, il a été mon principal éditeur de code pendant quelques temps. Je m’en sers aujourd'hui encore très régulièrement dans mon terminal mais pas assez pour toujours me souvenir des commandes que je trouvais les plus pratiques.
