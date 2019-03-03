@@ -132,19 +132,14 @@ export default {
       this.requestStatus = 'PENDING'
       const message = {
         subject: 'Formulaire de contact',
-        to: process.env.CONTACT_FORM_TO,
+        to: process.env.GRIDSOME_CONTACT_FORM_TO,
         email: this.inputs.email,
         message: this.inputs.message
       }
-      if (process.env.CONTACT_FORM_CC) {
-        message.cc = process.env.CONTACT_FORM_CC
+      if (process.env.GRIDSOME_CONTACT_FORM_CC) {
+        message.cc = process.env.GRIDSOME_CONTACT_FORM_CC
       }
-      sendMail({
-        subject: 'Formulaire de contact',
-        to: process.env.CONTACT_FORM_TO,
-        email: this.inputs.email,
-        message: this.inputs.message
-      })
+      sendMail(message)
         .then(r => {
           this.requestStatus = 'FINISHED_OK'
         })
