@@ -17,10 +17,10 @@
       <!-- Add the modifier "is-active" to display it on mobile -->
       <div id="app-menu" class="navbar-menu" :class="{'is-active': mobileMenuIsOpened}">
         <div class="navbar-end">
-          <router-link @click="mobileMenuIsOpened = false" to="/" class="navbar-item"> Home </router-link>
-          <router-link @click="mobileMenuIsOpened = false" to="/blog" class="navbar-item"> Blog </router-link>
-          <router-link @click="mobileMenuIsOpened = false" to="/cv" class="navbar-item"> CV </router-link>
-          <router-link @click="mobileMenuIsOpened = false" to="/contact" class="navbar-item"> Contact </router-link>
+          <g-link @click="mobileMenuIsOpened = false" to="/" class="navbar-item"> Home </g-link>
+          <g-link @click="mobileMenuIsOpened = false" to="/blog" class="navbar-item"> Blog </g-link>
+          <g-link @click="mobileMenuIsOpened = false" to="/cv" class="navbar-item"> CV </g-link>
+          <g-link @click="mobileMenuIsOpened = false" to="/contact" class="navbar-item"> Contact </g-link>
         </div>
       </div>
 

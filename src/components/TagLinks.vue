@@ -3,7 +3,7 @@
   <div class="tags">
     <ul>
       <li class="tag is-medium is-light" v-for="tag in tags" :key="tag.id">
-        <router-link :to="tag.path">{{tag.name}}</router-link>
+        <g-link :to="tag.path">{{tag.name}}</g-link>
       </li>
     </ul>
   </div>

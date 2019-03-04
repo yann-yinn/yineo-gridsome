@@ -1,7 +1,7 @@
 <template>
-  <router-link class="button" :to="to" @click.native="isLoading = !isLoading" :class="[buttonClass, {'is-loading' : isLoading }]">
+  <g-link class="button" :to="to" @click.native="isLoading = !isLoading" :class="[buttonClass, {'is-loading' : isLoading }]">
     <slot></slot>
-  </router-link>
+  </g-link>
 </template>
 
 <script>

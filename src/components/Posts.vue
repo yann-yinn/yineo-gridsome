@@ -10,9 +10,9 @@
         </div>
 
         <div class="column">
-          <router-link class="title is-3" :to="post.path">
+          <g-link class="title is-3" :to="post.path">
             <h2 v-html="post.title"></h2>
-          </router-link>
+          </g-link>
           <PostDate :date="post.date"/>
 
           <div class="content" v-html="striptags(post.content).substr(0, 300) + '...'"></div>
