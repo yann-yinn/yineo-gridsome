@@ -22,7 +22,7 @@ module.exports = {
         },
         remark: {
           plugins: [
-            '@gridsome/remark-prismjs'
+            [ 'gridsome-plugin-remark-shiki', { theme: 'nord' } ]
           ]
         }
       }
@@ -42,5 +42,5 @@ module.exports = {
         typeName: 'Block'
       }
     }
-  ]
+  ],
 }
