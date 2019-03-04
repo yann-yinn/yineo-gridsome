@@ -9,7 +9,7 @@ tags_ids:
 
 Besoin de configurer vous-même **httpS** sur un dédié pour vos applications **Node.js** ? L’exemple ci-dessous utilise [certbot](https://certbot.eff.org), qui déploie des certificats ssl de [Let’s Encrypt](https://letsencrypt.org/) et ajoute automatiquement une tâche cron pour que le certificat ssl soit renouvelé automatiquement. Je ne suis pas du tout expert en Nginx, mais si jamais ça peut aider quelqu'un à débrouissailler la problématique, voici comment j'ai procédé:
 
-```nginx
+<pre>
 # first install certbot and then run this command on your server
 # certbot certonly --authenticator standalone --pre-hook "nginx -s stop" --post-hook "nginx"
 # this will stop for a few seconds your nginx server and generate your Let's Encrypt ssl certificates, and configure
@@ -40,6 +40,6 @@ server {
   include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
   ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 }
-```
+</pre>
 
 Ce gist contient quelques infos complémentaires utiles, ajouté par un internaute de passage: https://gist.github.com/yann-yinn/ac68d308b2069982f898736a3d76d2f0
