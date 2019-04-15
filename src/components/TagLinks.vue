@@ -15,5 +15,5 @@ export default {
   props: {
     tags: { type: Array, require: true }
   }
-}
+};
 </script>

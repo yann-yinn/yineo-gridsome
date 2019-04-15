@@ -2,16 +2,16 @@
   <div>
     <AppHeader/>
     <BulmaNavigation/>
-    <slot />
+    <slot/>
     <AppFooter/>
   </div>
 </template>
 
 <script>
-import AppHeader from '~/components/AppHeader'
-import BulmaNavigation from '~/components/BulmaNavigation'
-import AppFooter from '~/components/AppFooter'
+import AppHeader from "~/components/AppHeader";
+import BulmaNavigation from "~/components/BulmaNavigation";
+import AppFooter from "~/components/AppFooter";
 export default {
   components: { AppHeader, BulmaNavigation, AppFooter }
-}
+};
 </script>

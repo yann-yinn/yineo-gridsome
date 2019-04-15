@@ -3,8 +3,8 @@
 </template>
 
 <script>
-import moment from 'moment'
-import 'moment/locale/fr'
+import moment from "moment";
+import "moment/locale/fr";
 export default {
   props: {
     date: { required: true }
@@ -12,13 +12,13 @@ export default {
   methods: {
     moment
   }
-}
+};
 </script>
 
 <style>
 .date {
   margin-bottom: 1rem;
   font-size: 20px;
-  color: #444
+  color: #444;
 }
 </style>

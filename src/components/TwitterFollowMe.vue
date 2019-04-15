@@ -1,7 +1,7 @@
 <template>
   <div>
-    <a href="https://twitter.com/yineofr">Suivre @yineofr sur twitter </a>
-    <img class="logo-twitter" src="~/assets/images/logo-twitter.png" />
+    <a href="https://twitter.com/yineofr">Suivre @yineofr sur twitter</a>
+    <img class="logo-twitter" src="~/assets/images/logo-twitter.png">
   </div>
 </template>
 

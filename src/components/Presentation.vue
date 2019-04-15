@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import BulmaGrid from './BulmaGrid'
-import PostTeaserHomepage from './PostTeaserHomepage'
-import PresentationColumnLeft from './PresentationColumnLeft'
-import PresentationColumnRight from './PresentationColumnRight'
+import BulmaGrid from "./BulmaGrid";
+import PostTeaserHomepage from "./PostTeaserHomepage";
+import PresentationColumnLeft from "./PresentationColumnLeft";
+import PresentationColumnRight from "./PresentationColumnRight";
 export default {
   components: {
     BulmaGrid,
@@ -36,5 +36,5 @@ export default {
   props: {
     posts: { type: Array, default: () => [] }
   }
-}
+};
 </script>

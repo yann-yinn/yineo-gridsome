@@ -2,28 +2,30 @@
   <div class="container">
     <nav class="navbar">
       <div class="navbar-brand">
-
         <span class="navbar-item is-hidden-desktop">
-          <img alt="Logo Yineo" src="/src/Yineo_logo_mobile.svg" class="logo-mobile" />
+          <img alt="Logo Yineo" src="/src/Yineo_logo_mobile.svg" class="logo-mobile">
         </span>
 
-        <div @click="mobileMenuIsOpened = !mobileMenuIsOpened" :class="{'is-active': mobileMenuIsOpened}" class="navbar-burger" data-target="app-menu">
-          <img alt="Logo Yineo" src="/src/Yineo_burger.svg" class="yineo-burger" />
+        <div
+          @click="mobileMenuIsOpened = !mobileMenuIsOpened"
+          :class="{'is-active': mobileMenuIsOpened}"
+          class="navbar-burger"
+          data-target="app-menu"
+        >
+          <img alt="Logo Yineo" src="/src/Yineo_burger.svg" class="yineo-burger">
         </div>
-
       </div>
 
       <!-- This "nav-menu" is hidden on mobile -->
       <!-- Add the modifier "is-active" to display it on mobile -->
       <div id="app-menu" class="navbar-menu" :class="{'is-active': mobileMenuIsOpened}">
         <div class="navbar-end">
-          <g-link @click="mobileMenuIsOpened = false" to="/" class="navbar-item"> Home </g-link>
-          <g-link @click="mobileMenuIsOpened = false" to="/blog" class="navbar-item"> Blog </g-link>
-          <g-link @click="mobileMenuIsOpened = false" to="/cv" class="navbar-item"> CV </g-link>
-          <g-link @click="mobileMenuIsOpened = false" to="/contact" class="navbar-item"> Contact </g-link>
+          <g-link @click="mobileMenuIsOpened = false" to="/" class="navbar-item">Home</g-link>
+          <g-link @click="mobileMenuIsOpened = false" to="/blog" class="navbar-item">Blog</g-link>
+          <g-link @click="mobileMenuIsOpened = false" to="/cv" class="navbar-item">CV</g-link>
+          <g-link @click="mobileMenuIsOpened = false" to="/contact" class="navbar-item">Contact</g-link>
         </div>
       </div>
-
     </nav>
   </div>
 </template>
@@ -32,10 +34,10 @@
 export default {
   data() {
     return {
-      mobileMenuIsOpened: false,
-    }
+      mobileMenuIsOpened: false
+    };
   }
-}
+};
 </script>
 
 <style scoped>

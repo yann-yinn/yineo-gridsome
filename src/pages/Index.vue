@@ -22,14 +22,20 @@
 </template>
 
 <script>
-import MainLayout from "@/layouts/MainLayout"
-import BulmaGrid from "@/components/BulmaGrid"
-import PostTeaserHomepage from "@/components/PostTeaserHomepage"
-import PresentationColumnLeft from "@/components/PresentationColumnLeft"
-import PresentationColumnRight from "@/components/PresentationColumnRight"
+import MainLayout from "@/layouts/MainLayout";
+import BulmaGrid from "@/components/BulmaGrid";
+import PostTeaserHomepage from "@/components/PostTeaserHomepage";
+import PresentationColumnLeft from "@/components/PresentationColumnLeft";
+import PresentationColumnRight from "@/components/PresentationColumnRight";
 export default {
-  components: { MainLayout, BulmaGrid, PostTeaserHomepage, PresentationColumnLeft, PresentationColumnRight }
-}
+  components: {
+    MainLayout,
+    BulmaGrid,
+    PostTeaserHomepage,
+    PresentationColumnLeft,
+    PresentationColumnRight
+  }
+};
 </script>
 
 <page-query>

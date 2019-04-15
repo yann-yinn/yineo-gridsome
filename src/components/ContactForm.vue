@@ -22,9 +22,8 @@
     <template v-if="requestStatus === 'FINISHED_ERROR'">
       <div>
         <div class="message is-danger">
-          <div
-            class="message-body"
-          >Excusez-moi pour ce désagrément, mais une erreur est survenue pendant l'envoi du message et le mail n'a pas pu être envoyé 😞
+          <div class="message-body">
+            Excusez-moi pour ce désagrément, mais une erreur est survenue pendant l'envoi du message et le mail n'a pas pu être envoyé 😞
             <br>
             {{requestError}}
           </div>
@@ -83,71 +82,71 @@
 </template>
 
 <script>
-import { sendMail } from '@/services/sendgrid'
+import { sendMail } from "@/services/sendgrid";
 export default {
   data() {
     return {
       inputs: {
-        email: '',
-        message: '',
-        nom: ''
+        email: "",
+        message: "",
+        nom: ""
       },
       errors: [],
-      requestStatus: 'NOT_STARTED',
+      requestStatus: "NOT_STARTED",
       requestError: null,
       formAlreadySubmitted: false
-    }
+    };
   },
   methods: {
     formValidate() {
-      this.errors = []
+      this.errors = [];
       if (!this.inputs.email.trim()) {
         this.errors.push({
-          id: 'email',
-          message: 'Le champ email est vide 😱 '
-        })
+          id: "email",
+          message: "Le champ email est vide 😱 "
+        });
       }
       if (!this.inputs.message.trim()) {
         this.errors.push({
-          id: 'message',
+          id: "message",
           message: "Il n'y a pas de message 😭"
-        })
+        });
       } else if (this.inputs.message.length < 5) {
         this.errors.push({
-          id: 'message',
-          message: 'Le message semble trop court 🤔'
-        })
+          id: "message",
+          message: "Le message semble trop court 🤔"
+        });
       }
     },
     getError(id) {
-      return this.errors.find(e => e.id === id)
+      return this.errors.find(e => e.id === id);
     },
     onSubmit() {
-      this.requestError = null
-      this.formAlreadySubmitted = true
-      this.formValidate()
+      this.requestError = null;
+      this.formAlreadySubmitted = true;
+      this.formValidate();
       if (this.errors.length > 0) {
-        return
+        return;
       }
-      this.requestStatus = 'PENDING'
+      this.requestStatus = "PENDING";
       const message = {
-        subject: 'Formulaire de contact',
+        subject: "Formulaire de contact",
         to: process.env.GRIDSOME_CONTACT_FORM_TO,
         email: this.inputs.email,
         message: this.inputs.message
-      }
+      };
       if (process.env.GRIDSOME_CONTACT_FORM_CC) {
-        message.cc = process.env.GRIDSOME_CONTACT_FORM_CC
+        message.cc = process.env.GRIDSOME_CONTACT_FORM_CC;
       }
       sendMail(message)
         .then(r => {
-          this.requestStatus = 'FINISHED_OK'
+          this.requestStatus = "FINISHED_OK";
         })
         .catch(e => {
-          console.log('e', e)
-          this.requestStatus = 'FINISHED_ERROR'
-          this.requestError = e.message
-        })
+          console.log("e", e);
+          this.requestStatus = "FINISHED_ERROR";
+          this.requestError = e.message;
+        });
     }
   },
   // les erreurs affichées par le formulaire doivent s'effacer
@@ -157,10 +156,10 @@ export default {
       deep: true,
       handler: function() {
         if (this.formAlreadySubmitted) {
-          this.formValidate()
+          this.formValidate();
         }
       }
     }
   }
-}
+};
 </script>

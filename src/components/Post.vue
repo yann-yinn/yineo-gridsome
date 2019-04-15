@@ -20,14 +20,14 @@
 </template>
 
 <script>
-import PostDate from './PostDate'
-import TagLinks from './TagLinks'
+import PostDate from "./PostDate";
+import TagLinks from "./TagLinks";
 export default {
   components: { PostDate, TagLinks },
   props: {
     post: { type: Object, default: {} }
   }
-}
+};
 </script>
 
 <style scoped>

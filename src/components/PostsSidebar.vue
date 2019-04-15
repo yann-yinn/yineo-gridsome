@@ -2,9 +2,7 @@
 <template>
   <ul class="posts">
     <div v-for="post in posts" class="post" :key="post.$slug">
-      <nuxt-link
-        :to="{ name: 'blog-slug', params: { slug: post.$slug, post: post } }"
-      >
+      <nuxt-link :to="{ name: 'blog-slug', params: { slug: post.$slug, post: post } }">
         <li>
           <h3 v-html="post.title"></h3>
         </li>
@@ -18,7 +16,7 @@ export default {
   props: {
     posts: { type: Array, default: () => [] }
   }
-}
+};
 </script>
 
 <style scoped>

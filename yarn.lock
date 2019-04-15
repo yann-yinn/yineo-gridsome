@@ -673,10 +673,10 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@gridsome/cli@^0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@gridsome/cli/-/cli-0.0.8.tgz#494902b8fb53093113bed995790beae7ccd916ea"
-  integrity sha512-5jZr6SO7JChN4/oc7RIZ4vHH0dqlwTk8Ft+vUlFkhubakvADc+p6Chp8+mAI1h993hQm8fooXb8HBvXuZikpcA==
+"@gridsome/cli@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@gridsome/cli/-/cli-0.0.9.tgz#8adc7b6c809dc85e5993bc496f2c6ee42930ad7c"
+  integrity sha512-2QilnFymV03k1KxLbZYVA2IMQaQTMA3eBIcHhHRkxPhLYO9mbhoB1GJYKjKU3m7Ng1g4FwCnO7Imqaf2fYV5ow==
   dependencies:
     "@hjvedvik/tasks" "^0.0.8"
     chalk "^2.4.1"
@@ -3743,13 +3743,13 @@ gridsome-plugin-remark-shiki@^0.2.0:
     shiki-languages "^0.1.0"
     unist-util-visit "^1.4.0"
 
-gridsome@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.5.0.tgz#291b9069d4bec6ec2fa012bd21ec71e89d685ef3"
-  integrity sha512-AdcCOM4KPlU2rpy3s4KPHBwTx98DwEtI7GfswYXeLZppyf9Jy16MbuLg9OVYGSbF45xnnHc8Qly3ER/NiCKNxw==
+gridsome@0.5.7:
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.5.7.tgz#1da9448fcad7f891fe98586496e7c5c9a1c593a4"
+  integrity sha512-i5xm9OlUy9GuqmzHym/G9rrU2u9bHT3zyKW83yMLFiTCKbLkSZX6/VV5LIdt/KVQfFAAyCaCpiZGwSoHFmn4bg==
   dependencies:
     "@babel/core" "^7.0.0"
-    "@gridsome/cli" "^0.0.8"
+    "@gridsome/cli" "^0.0.9"
     "@sindresorhus/slugify" "^0.8.0"
     "@vue/babel-preset-app" "^3.4.0"
     "@vue/component-compiler-utils" "^2.5.2"
@@ -3784,7 +3784,7 @@ gridsome@^0.5.0:
     imagemin-webp "^5.0.0"
     is-relative "^1.0.0"
     is-url "^1.2.4"
-    jest-worker "^24.0.0"
+    jest-worker "24.0.0"
     json-loader "^0.5.7"
     loader-utils "^1.2.3"
     lodash "^4.17.11"
@@ -4665,7 +4665,7 @@ javascript-stringify@^1.6.0:
   resolved "https://registry.yarnpkg.com/javascript-stringify/-/javascript-stringify-1.6.0.tgz#142d111f3a6e3dae8f4a9afd77d45855b5a9cce3"
   integrity sha1-FC0RHzpuPa6PSpr9d9RYVbWpzOM=
 
-jest-worker@^24.0.0:
+jest-worker@24.0.0:
   version "24.0.0"
   resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-24.0.0.tgz#3d3483b077bf04f412f47654a27bba7e947f8b6d"
   integrity sha512-s64/OThpfQvoCeHG963MiEZOAAxu8kHsaL/rCMF7lpdzo7vgF0CtPml9hfguOMgykgH/eOm4jFP4ibfHLruytg==

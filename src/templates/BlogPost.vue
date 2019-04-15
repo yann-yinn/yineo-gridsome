@@ -5,14 +5,14 @@
 </template>
 
 <script>
-import PostLayout from '@/layouts/PostLayout'
-import Post from '@/components/Post'
+import PostLayout from "@/layouts/PostLayout";
+import Post from "@/components/Post";
 export default {
   components: {
     PostLayout,
-    Post 
+    Post
   }
-}
+};
 </script>
 
 <page-query>

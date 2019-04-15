@@ -1,14 +1,14 @@
 <template>
   <MainLayout>
-    <Contact />
+    <Contact/>
   </MainLayout>
 </template>
 
 <script>
-import Contact from '@/components/Contact'
-import MainLayout from "@/layouts/MainLayout"
+import Contact from "@/components/Contact";
+import MainLayout from "@/layouts/MainLayout";
 
 export default {
   components: { Contact, MainLayout }
-}
+};
 </script>

@@ -9,9 +9,7 @@
         <PostDate :date="post.date"/>
         <div class="content" v-html="striptags(post.content).substr(0, 200) + '...'"></div>
         <div>
-          <BulmaButtonLink
-            :to="post.path"
-          >Lire l'article</BulmaButtonLink>
+          <BulmaButtonLink :to="post.path">Lire l'article</BulmaButtonLink>
         </div>
       </div>
     </div>
@@ -19,9 +17,9 @@
 </template>
 
 <script>
-import striptags from 'striptags'
-import BulmaButtonLink from './BulmaButtonLink'
-import PostDate from './PostDate'
+import striptags from "striptags";
+import BulmaButtonLink from "./BulmaButtonLink";
+import PostDate from "./PostDate";
 export default {
   components: { BulmaButtonLink, PostDate },
   props: {
@@ -30,5 +28,5 @@ export default {
   methods: {
     striptags
   }
-}
+};
 </script>

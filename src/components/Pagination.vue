@@ -13,15 +13,15 @@ export default {
   props: {
     totalPages: { type: Number, default: 1 }
   },
-  data () {
+  data() {
     return {
-      routeName: { type: String, default: '' }
-    }
+      routeName: { type: String, default: "" }
+    };
   },
   computed: {
-    getRouteName () {
-      return this.$route.name
+    getRouteName() {
+      return this.$route.name;
     }
   }
-}
+};
 </script>

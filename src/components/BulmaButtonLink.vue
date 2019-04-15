@@ -1,5 +1,10 @@
 <template>
-  <g-link class="button" :to="to" @click.native="isLoading = !isLoading" :class="[buttonClass, {'is-loading' : isLoading }]">
+  <g-link
+    class="button"
+    :to="to"
+    @click.native="isLoading = !isLoading"
+    :class="[buttonClass, {'is-loading' : isLoading }]"
+  >
     <slot></slot>
   </g-link>
 </template>
@@ -7,15 +12,15 @@
 <script>
 export default {
   props: {
-    buttonClass: { type: String, default: 'is-primary' },
-    to: { type: String | Array, default: '/' }
+    buttonClass: { type: String, default: "is-primary" },
+    to: { type: String | Array, default: "/" }
   },
-  data () {
+  data() {
     return {
       isLoading: false
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>

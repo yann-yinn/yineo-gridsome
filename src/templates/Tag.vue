@@ -10,16 +10,16 @@
 </template> 
 
 <script>
-import MainLayout from "@/layouts/MainLayout"
-import Posts from "@/components/Posts"
+import MainLayout from "@/layouts/MainLayout";
+import Posts from "@/components/Posts";
 export default {
   components: { MainLayout, Posts },
   metaInfo() {
     return {
       title: this.$page.tag.title
-    }
+    };
   }
-}
+};
 </script>
 
 <page-query>
