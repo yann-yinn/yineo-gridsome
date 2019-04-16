@@ -49,7 +49,7 @@ export default {
       edges {
         node {
           title
-          image
+          image (width: 200)
           content
           path
           date(format: "D MMMM, YYYY")
