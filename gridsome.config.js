@@ -5,6 +5,10 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
+  // used as document title and document description
+  siteName: "Yineo",
+  siteDescription: "Consultant freelance JAMStack, Vue.js, API",
+  siteUrl: "https://yineo.fr",
   plugins: [
     {
       use: "@gridsome/source-filesystem",

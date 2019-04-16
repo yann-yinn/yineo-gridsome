@@ -3,10 +3,6 @@
 export default function(Vue, { router, head }) {
   // Add a meta tag
   head.meta.push({
-    name: "description",
-    content: "Consultant freelance JAMStack, Vue.js, API"
-  });
-  head.meta.push({
     name: "keywords",
     content: "Vue.js, JAMStack, Nuxt.js, Gridsome, APIs, GraphQL"
   });

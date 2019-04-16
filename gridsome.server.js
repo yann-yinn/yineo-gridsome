@@ -7,6 +7,7 @@
 
 module.exports = function(api) {
   api.loadSource(store => {
+    // add some settings
     store.addMetaData("homepageTitle", "Yann Boisselier");
     store.addMetaData(
       "homepageSubtitle",

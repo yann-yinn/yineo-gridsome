@@ -34,6 +34,11 @@ export default {
     PostTeaserHomepage,
     PresentationColumnLeft,
     PresentationColumnRight
+  },
+  metaInfo() {
+    return {
+      title: "Consulting Vue.js & JAMStack"
+    };
   }
 };
 </script>

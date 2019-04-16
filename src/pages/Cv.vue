@@ -19,6 +19,11 @@ export default {
     PostTeaserHomepage,
     PresentationColumnLeft,
     PresentationColumnRight
+  },
+  metaInfo() {
+    return {
+      title: "CV"
+    };
   }
 };
 </script>
