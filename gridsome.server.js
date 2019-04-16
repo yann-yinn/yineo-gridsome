@@ -7,7 +7,14 @@
 
 module.exports = function(api) {
   api.loadSource(store => {
-    store.addMetaData('homepageTitle', 'Yann Boisselier')
-    store.addMetaData('homepageSubtitle', 'développeur freelance à Nantes spécialisé Vue.js, Nuxt, Gridsome, GraphQL')
-  })
-}
+    store.addMetaData("homepageTitle", "Yann Boisselier");
+    store.addMetaData(
+      "homepageSubtitle",
+      "Consultant freelance Vue.js, API & JAMStack"
+    );
+    store.addMetaData(
+      "homepageSubSubtitle",
+      "Vue.js, GraphQL, Nuxt.js, Gridsome"
+    );
+  });
+};
