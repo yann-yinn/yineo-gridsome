@@ -37,7 +37,7 @@ export default {
   },
   metaInfo() {
     return {
-      title: "Consulting Vue.js & JAMStack"
+      title: "Consulting Vue.js"
     };
   }
 };

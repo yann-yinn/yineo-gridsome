@@ -9,6 +9,11 @@ import Contact from "@/components/Contact";
 import MainLayout from "@/layouts/MainLayout";
 
 export default {
-  components: { Contact, MainLayout }
+  components: { Contact, MainLayout },
+  metaInfo() {
+    return {
+      title: "Contact"
+    };
+  }
 };
 </script>

@@ -8,7 +8,12 @@
 import MainLayout from "@/layouts/MainLayout";
 import Posts from "@/components/Posts.vue";
 export default {
-  components: { MainLayout, Posts }
+  components: { MainLayout, Posts },
+  metaInfo() {
+    return {
+      title: "Blog"
+    };
+  }
 };
 </script>
 
