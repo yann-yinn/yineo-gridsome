@@ -7,7 +7,7 @@
 module.exports = {
   // used as document title and document description
   siteName: "Yineo",
-  siteDescription: "Consultant freelance JAMStack, Vue.js, API",
+  siteDescription: "Consultant JAMStack & Vue.js",
   siteUrl: "https://yineo.fr",
   plugins: [
     {
