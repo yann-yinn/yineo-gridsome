@@ -48,6 +48,8 @@ Dont la réponse JSON sera :
 
 Simple non ? A noter qu'on obtient uniquement les champs qu'on a demandé dans la réponse et pas les objets utilisateurs entiers, c'est une fonctionnalité de base de GraphQL.
 
+## Les arguments de champs
+
 Nous avons la possibilité pour chaque champ d'avoir des **arguments**, un peu comme une fonction. Ainsi, pour paginer mes utilisateurs si j'ai beaucoup de résultats, je pourrai écrire:
 
 ```graphql
@@ -88,9 +90,9 @@ Poussons le bouchon un peu plus loin avec une relation: je voudrais maintenant a
 }
 ```
 
-On peut apercevoir là tout ce qu'il possible à faire avec une seule requête GraphQL tout en conservant une syntaxe  courte et lisible, et on peut observer que les arguments aussi puissants que facile à écrire.
+On peut apercevoir là tout ce qu'il possible à faire avec une seule requête GraphQL, avec une syntaxe qui reste très lisible même quand les choses se corsent.
 
- L'équivalent en REST pourrait ressembler à quelque chose comme ça, en suivant la spec JSON API:
+L'équivalent en REST serait quelque chose comme ça, en suivant la spec JSON API:
 
 > GET https://localhost:4000/api/users?include=posts&fields[users]=email,picture&fields[posts]=picture&page[limit]=20
 
@@ -119,11 +121,11 @@ Voici comment nous pouvons envoyer notre première requête pour récupérer les
     .then(result => console.log("result", result));
 ```
 
-Il existent des clients GraphQL plus ou moins complexes (Apollo étant le plus connu) mais ils sont surtout là pour ajouter des fonctionnalités ou des helpers (pour le cache client, la gestion du token etc), mais ils ne sont indispensables en soi. J'ai déjà réalisé des projets en utilisant simplement *axios* pour faire mes requêtes GraphQL, qui est la librairie que j'utilisais auparavant quand j'interrogerais des API REST.
+Il existent des clients GraphQL plus ou moins complexes (Apollo étant le plus connu) mais ils sont surtout là pour ajouter des fonctionnalités ou des helpers (pour le cache client, la gestion du token etc), ils ne sont indispensables en soi et ne font pas partie de GraphQL. J'ai déjà réalisé des projets en utilisant simplement *axios* pour faire mes requêtes GraphQL, qui est la librairie que j'utilisais auparavant quand j'interrogerais des API REST.
 
 ## Côté serveur : créer un schema avec ses revolvers.
 
-Voici un exemple très simple d'un serveur d'API GraphQL en node.js, qui permet de lister les utilisateurs d'un site. On notera au passage que le code nécessaire minimal pour créer un serveur GraphQL est très léger et qu'il n'y a rien de très compliqué ici non plus.
+Voici un exemple très simple d'un serveur d'API GraphQL en node.js, qui permet de lister les utilisateurs d'un site. Le code est petit mais c'est bien un véritable serveur GraphQL fonctionnel. Les utilisateurs sont stockés ici dans une variable users, mais le fonctionnement serait identique avec une base de données à la place.
 
 
 **📝 index.js**
@@ -144,6 +146,7 @@ const users = [
   },
 ];
 
+// définition de notre schema GraphQL
 const typeDefs = gql`
   type Query {
     user(id:ID!): User
@@ -174,7 +177,7 @@ server.listen().then(({ url }) => {
 ```
 
 
-> **NOTA BENE :** Pour la clarté de lecture et la concision du code, j'ai déclaré ci-dessus le schema en "SDL" (Schema Language Definition), mais je recommande plutôt d'utiliser graphql-js (https://github.com/graphql/graphql-js) pour déclarer son schema. (vous trouverez ici quelques considérations sur ce sujet : https://www.prisma.io/blog/the-problems-of-schema-first-graphql-development-x1mn4cb0tyl3)
+> **NOTA BENE :** Pour la clarté de lecture et la concision du code, j'ai déclaré ci-dessus le schema en "SDL" (Schema Language Definition), mais je recommande plutôt d'utiliser graphql-js (https://github.com/graphql/graphql-js) pour déclarer son schema. C'est plus verbeux mais plus souple (vous trouverez ici quelques considérations sur ce sujet : https://www.prisma.io/blog/the-problems-of-schema-first-graphql-development-x1mn4cb0tyl3)
 
 ## A chaque champ son resolver
 
@@ -184,7 +187,7 @@ Le type **Query** est spécial : tous les champs déclarés dans ce type représ
 
 **Le principe de base d'un serveur GraphQL est simple : A chaque champ d'un type, on associe une fonction qui devra renvoyer sa valeur.**
 
-Prenons un exemple : quand le serveur GraphQL reçoit la requête suivante :
+Prenons un exemple : supposons que le serveur GraphQL reçoive la requête suivante :
 
 ```graphql
 {
@@ -194,7 +197,17 @@ Prenons un exemple : quand le serveur GraphQL reçoit la requête suivante :
 }
 ```
 
-Il va chercher un champ correspondant sur le type Query du schéma :
+c'est en réalité un raccourci syntaxique pour la requête suivante( notez le "query")
+
+```graphql
+query {
+  users {
+    email
+  }
+}
+```
+
+Le moteur d'éxécution GraphQL sur le serveur va donc d'abord chercher un champ *users* sur le type *Query* du schéma :
 
 ```graphql
   type Query {
@@ -203,7 +216,9 @@ Il va chercher un champ correspondant sur le type Query du schéma :
   }
 ```
 
-Notre schéma déclare en effet un champ `users`, qui retourne une liste d'objets de type `User`. Le moteur d'exécution GraphQL va chercher la fonction qu'il doit appeler pour "résoudre" la valeur du champ *users* en inspectant les **resolvers**
+Notre schéma déclare en effet un champ *users*, qui indique retourner une liste d'objets de type *User*. 
+
+Le moteur d'exécution GraphQL va chercher la fonction qu'il doit appeler pour "résoudre" la valeur du champ *users* en inspectant les **resolvers**
 
 ```graphql
 const resolvers = {
@@ -218,11 +233,11 @@ const resolvers = {
 };
 ```
 
-Il y a bien une fonction *users* définie dans les resolvers, le moteur de GraphQL l'exécute et renvoie la liste des utilisateurs comme étant la réponse à notre requête !
+Il y trouve bien une fonction *users* définie dans les resolvers de champs du type *Query*. Le moteur de GraphQL exécute la fonction *users()* et renvoie la liste des utilisateurs comme étant la réponse à notre requête.
 
-Vous pouvez faire absolumenet TOUT CE QUE VOUS VOULEZ dans la fonction *users()*, la seule obligation c'est qu'elle renvoie une liste d'objets de type `User`, c'est à dire contenant des champs `id`, `name` et `email`.
+Vous pouvez faire TOUT CE QUE VOUS VOULEZ dans la fonction *users()*, la seule obligation c'est qu'elle renvoie une liste d'objets de type `User`, c'est à dire contenant des champs `id`, `name` et `email`.
 
-Pour bien comprendre le fonctionnement des resolvers, imaginons maintenant que nous souhaitons pouvoir recevoir les emails des utilisateurs en lettres majuscules :
+Pour être sûr de bien comprendre le fonctionnement des resolvers, imaginons maintenant que nous souhaitons pouvoir recevoir les emails des utilisateurs en lettres minuscules OU majuscules, au moyen de la requête suivante:
 
 ```js
 {
@@ -232,7 +247,7 @@ Pour bien comprendre le fonctionnement des resolvers, imaginons maintenant que n
 }
 ```
 
-On va d'abord ajouter à notre schema l'argument *uppercase* sur notre type User:
+On va d'abord déclarer dans notre schema l'argument *uppercase* sur notre champ *email*:
 
 ```graphql
 type User {
@@ -242,7 +257,7 @@ type User {
 }
 ```
 
-Ensuite, il nous faut déclarer un nouveau "resolver" pour le champ "email" de notre type "User":
+Ensuite, il nous faut déclarer un nouveau **resolver** pour le champ "email" de notre type "User":
 
 ```js
 const resolvers = {
@@ -262,9 +277,11 @@ const resolvers = {
 };
 ```
 
-Et le tour est joué ! mais que signifie ce premier paramètre *parent* dans notre fonction de résolution du champ ?
+Et le tour est joué ! 
 
-Dans ce cas, le paramètre `parent` sera un "User". On aperçoit ici la nature **d'arbre** de GraphQL. En effet la requête pour obtenir nos email en majuscules sera la suivante:
+Mais que signifie ce premier paramètre *parent* dans notre fonction de résolution du champ ?
+
+Dans ce cas, le paramètre *parent* sera un "User". On aperçoit ici la nature **d'arbre** de GraphQL. En effet la requête pour obtenir nos email en majuscules est la suivante:
 
 ```graphql
 {
@@ -274,9 +291,9 @@ Dans ce cas, le paramètre `parent` sera un "User". On aperçoit ici la nature *
 }
 ```
 
-la valeur du champ `users` a déjà été "résolu" au niveau 1 via le resolvers "users()". Quand on arrive au niveau 2, celui de notre champ email, on peut donc accéder directement à notre *user* via le "parent", et s'en servir pour notre resolver de champ.
+la valeur du champ `users` a déjà été "résolu" au niveau 1 par la fonction *users()*. Quand on arrive au niveau 2, celui de notre champ email, on peut donc accéder directement à notre *user* via le *parent*, et s'en servir pour notre fonction de résolution.
 
-Comme je l'ai dit : A chaque champ son resolver. En réalité, les champs *id* et *name* du type User ont aussi des **resolvers implicites**, de la forme suivante.
+Comme je l'ai dit : A chaque champ son resolver. En réalité, même les champs *id* et *name* du type User ont aussi des **resolvers implicites**, de la forme suivante.
 
 ```graphql
   id(parent, args) {
@@ -287,11 +304,13 @@ Comme je l'ai dit : A chaque champ son resolver. En réalité, les champs *id* e
   }
 ```
 
-*Apollo Server* ou *GraphQL JS* déclarent en effet un "resolver par défaut", qui retourner le champ correspondant du parent par défaut. Autrement dit, si aucun resolver n'est déclaré pour le champ *name* du type *User*, il va retourner `parent.name`, le parent (niveau précédent de l'arbre) étant le `user` dans ce cas.
+*Apollo Server* ou *GraphQL JS* déclarent en effet un "resolver par défaut", qui retourne le champ correspondant du parent par défaut. 
+
+Autrement dit, si aucun resolver n'est déclaré pour le champ *name* du type *User*, il va retourner `parent.name`, c'est à dire la valeur de `user.name` dans ce cas.
 
 ## Conclusion
 
-Simplement avec les concepts dessus, vous êtes déjà en mesure de créer une API très puissante en profitant de certains avantages clefs de GraphQL :
+Il y a bien d'autres fonctionnalités intéressantes de GraphQL à explorer, mais une compréhension ce ces quelques concepts de base vous permet déjà de créer une API puissante et de profiter de certains avantages clefs de GraphQL :
 - Le typage qui permet de générer automatiquement votre documentation dans Graph**i**ql : au revoir les documentations pas à jour ou incomplète ! 
 - L'explorateur de requête Graph**i**ql qui permet de tester les requêtes et explorer votre API bien plus facilement et rapidement qu'avec POSTMan ou CURL.
 - Tirer pari de la puissance des arguments pour les champs
