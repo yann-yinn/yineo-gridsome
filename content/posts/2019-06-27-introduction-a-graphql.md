@@ -238,62 +238,6 @@ Il y trouve bien une fonction *users* définie dans les resolvers de champs du t
 
 Vous pouvez faire TOUT CE QUE VOUS VOULEZ dans la fonction *users()*, la seule obligation c'est qu'elle renvoie une liste d'objets de type `User`, c'est à dire contenant des champs `id`, `name` et `email`.
 
-Pour être sûr de bien comprendre le fonctionnement des resolvers, imaginons maintenant que nous souhaitons pouvoir recevoir les emails des utilisateurs en lettres minuscules OU majuscules, au moyen de la requête suivante:
-
-```js
-{
-  users {
-    email(uppercase: true)
-  }
-}
-```
-
-On va d'abord déclarer dans notre schema l'argument *uppercase* sur notre champ *email*:
-
-```graphql
-type User {
-  id: ID
-  name: String
-  email(uppercase: Boolean): String
-}
-```
-
-Ensuite, il nous faut déclarer un nouveau **resolver** pour le champ "email" de notre type "User":
-
-```js
-const resolvers = {
-  Query: {
-    user(parent, args) {
-      return users.find(user => user.id == args.id)
-    },
-    users () {
-      return users
-    }
-  },
-  User: {
-    email(parent, args) {
-      return args.uppercase ? parent.email.toUpperCase() : parent.email
-    }
-  }
-};
-```
-
-Et le tour est joué ! 
-
-Mais que signifie ce premier paramètre *parent* dans notre fonction de résolution du champ ?
-
-Dans ce cas, le paramètre *parent* sera un "User". On aperçoit ici la nature **d'arbre** de GraphQL. En effet la requête pour obtenir nos email en majuscules est la suivante:
-
-```graphql
-{
-  users {
-    email(uppercase: true)
-  }
-}
-```
-
-la valeur du champ `users` a déjà été "résolu" au niveau 1 par la fonction *users()*. Quand on arrive au niveau 2, celui de notre champ email, on peut donc accéder directement à notre *user* via le *parent*, et s'en servir pour notre fonction de résolution.
-
 ## Conclusion
 
 Il y a bien d'autres fonctionnalités intéressantes de GraphQL à explorer, mais une compréhension ce ces quelques concepts de base vous permet déjà de créer une API puissante et de profiter de certains avantages clefs de GraphQL parmi lesquels:
