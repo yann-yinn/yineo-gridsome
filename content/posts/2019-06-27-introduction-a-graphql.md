@@ -116,7 +116,7 @@ Voici comment nous pouvons envoyer notre première requête pour récupérer les
 
 Il existent des clients GraphQL plus ou moins complexes (Apollo étant le plus connu) mais ils sont surtout là pour ajouter des fonctionnalités ou des helpers (pour le cache client, la gestion du token etc), ils ne sont pas indispensables en soi et ne font pas partie de GraphQL. J'ai déjà réalisé des projets en utilisant simplement *axios* pour faire mes requêtes GraphQL, qui est la librairie que j'utilisais auparavant quand j'interrogerais des API REST.
 
-## Côté serveur : créer un schema avec ses revolvers.
+## Côté serveur : créer un schema avec ses resolvers
 
 Voici un exemple très simple d'un serveur d'API GraphQL en node.js, qui permet de lister les utilisateurs d'un site. Le code est petit mais c'est bien un véritable serveur GraphQL fonctionnel. Les utilisateurs sont stockés ici dans une variable users, mais le fonctionnement serait identique avec une base de données à la place.
 
