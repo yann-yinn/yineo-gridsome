@@ -120,6 +120,14 @@ Il existent des clients GraphQL plus ou moins complexes (Apollo étant le plus c
 
 Voici un exemple très simple d'un serveur d'API GraphQL en node.js, qui permet de lister les utilisateurs d'un site. Le code est petit mais c'est bien un véritable serveur GraphQL fonctionnel. Les utilisateurs sont stockés ici dans une variable users, mais le fonctionnement serait identique avec une base de données à la place.
 
+Installez simplement au préalable les paquets suivants :
+
+```sh
+npm install apollo-server graphql
+```
+
+Tuto complet : https://www.apollographql.com/docs/apollo-server/getting-started/
+
 
 **📝 index.js**
 
@@ -170,13 +178,13 @@ server.listen().then(({ url }) => {
 ```
 
 
-> **NOTA BENE :** Pour la clarté de lecture et la concision du code, j'ai déclaré ci-dessus le schema en "SDL" (Schema Language Definition), mais je recommande plutôt d'utiliser graphql-js (https://github.com/graphql/graphql-js) pour déclarer son schema. C'est plus verbeux mais plus souple (vous trouverez ici quelques considérations sur ce sujet : https://www.prisma.io/blog/the-problems-of-schema-first-graphql-development-x1mn4cb0tyl3)
+> **NOTA BENE :** Pour la clarté de lecture et la concision du code dans ce billet, j'ai déclaré ci-dessus le schema en "SDL" (Schema Language Definition), mais je recommande plutôt d'utiliser graphql-js (https://github.com/graphql/graphql-js) pour déclarer son schema. C'est plus verbeux mais plus souple (vous trouverez ici quelques considérations sur ce sujet : https://www.prisma.io/blog/the-problems-of-schema-first-graphql-development-x1mn4cb0tyl3)
 
 ## A chaque champ son resolver
 
 En GraphQL, on définit un schema avec des **types** composés de **champs**, tels que les types **User** ou **Query** ci-dessus. Par exemple les *champs* du type User sonts *id*, *email* et *name*.
 
-Le type **Query** est spécial : tous les champs déclarés dans ce type représentent les "points d'entrées" de notre API GraphQL. Il y aussi les types spéciaux **Mutations** et **Subscription** que je n'aborderai pas dans ce billet.
+Le type **Query** est spécial : tous les champs déclarés dans ce type représentent les "points d'entrées" de notre API GraphQL. Il y aussi les types spéciaux **Mutation** et **Subscription** que je n'aborderai pas dans ce billet.
 
 **Le principe de base d'un serveur GraphQL est simple : A chaque champ d'un type, on associe une fonction qui devra renvoyer sa valeur.**
 
