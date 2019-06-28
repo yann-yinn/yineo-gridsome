@@ -294,21 +294,6 @@ Dans ce cas, le paramètre *parent* sera un "User". On aperçoit ici la nature *
 
 la valeur du champ `users` a déjà été "résolu" au niveau 1 par la fonction *users()*. Quand on arrive au niveau 2, celui de notre champ email, on peut donc accéder directement à notre *user* via le *parent*, et s'en servir pour notre fonction de résolution.
 
-Comme je l'ai dit : A chaque champ son resolver. En réalité, même les champs *id* et *name* du type User ont aussi des **resolvers implicites**, de la forme suivante.
-
-```graphql
-  id(parent, args) {
-    return parent.id
-  }
-  name(parent, args) {
-    return parent.name
-  }
-```
-
-*Apollo Server* ou *GraphQL JS* déclarent en effet un "resolver par défaut", qui retourne le champ correspondant du parent par défaut. 
-
-Autrement dit, si aucun resolver n'est déclaré pour le champ *name* du type *User*, il va retourner `parent.name`, c'est à dire la valeur de `user.name` dans ce cas.
-
 ## Conclusion
 
 Il y a bien d'autres fonctionnalités intéressantes de GraphQL à explorer, mais une compréhension ce ces quelques concepts de base vous permet déjà de créer une API puissante et de profiter de certains avantages clefs de GraphQL parmi lesquels:
