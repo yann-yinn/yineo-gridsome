@@ -312,10 +312,10 @@ Autrement dit, si aucun resolver n'est déclaré pour le champ *name* du type *U
 ## Conclusion
 
 Il y a bien d'autres fonctionnalités intéressantes de GraphQL à explorer, mais une compréhension ce ces quelques concepts de base vous permet déjà de créer une API puissante et de profiter de certains avantages clefs de GraphQL :
-- Le typage qui permet de générer automatiquement votre documentation dans Graph**i**ql : au revoir les documentations pas à jour ou incomplète ! 
-- L'explorateur de requête Graph**i**ql qui permet de tester les requêtes et explorer votre API bien plus facilement et rapidement qu'avec POSTMan ou CURL.
-- Tirer pari de la puissance des arguments pour les champs
-- Alléger certains JSON en demande uniquement les champs dont vous avez besoin
+- Le typage qui permet de générer automatiquement votre documentation dans Graph**i**ql : au revoir les documentations pas à jour ou incomplètes ! 
+- L'explorateur Graph**i**ql permet aussi de tester vos requêtes et explorer votre API bien plus facilement et rapidement qu'avec POSTMAN ou CURL.
+- Tirer parti de la puissance des arguments pour les champs
+- Alléger certains JSON en demandant uniquement les champs dont vous avez besoin
 
 
 
