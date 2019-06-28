@@ -178,7 +178,7 @@ server.listen().then(({ url }) => {
 ```
 
 
-> **NOTA BENE :** Pour la clarté de lecture et la concision du code dans ce billet, j'ai déclaré ci-dessus le schema en "SDL" (Schema Language Definition), mais je recommande plutôt d'utiliser graphql-js (https://github.com/graphql/graphql-js) pour déclarer son schema. C'est plus verbeux mais plus souple (vous trouverez ici quelques considérations sur ce sujet : https://www.prisma.io/blog/the-problems-of-schema-first-graphql-development-x1mn4cb0tyl3)
+> **NOTA BENE :** Pour la clarté de lecture et la concision du code dans ce billet, j'ai déclaré ci-dessus le schema en "SDL" (Schema Language Definition). Pour de gros projets, je recommanderais plutôt d'utiliser graphql-js (https://github.com/graphql/graphql-js) pour déclarer son schema. C'est plus verbeux mais plus souple et modulaire (vous trouverez ici quelques considérations sur ce sujet : https://www.prisma.io/blog/the-problems-of-schema-first-graphql-development-x1mn4cb0tyl3)
 
 ## A chaque champ son resolver
 
