@@ -7,7 +7,7 @@ tags_ids:
   - javascript
 ---
 
-On en parle parfois de GraphQL comme quelque chose de complexe et un peu mystique; sans doute à cause d'un éco-système et un tooling très riche qui ajoutent des couches d'abstractions sur le coeur de ce qui fait GraphQL (Apollo Server, Apollo Client, Prisma etc. Dans ce billet je vais essayer de démystifier un peu ça et de montrer que GraphQL est peut être plus simple à appréhendez que vous ne pensez. Les exemples seront en JavaScript car c'est mon langage actuel; mais la théorie vaut pour tous les langages : GraphQL est une spec et n'est lié à aucun langage en particulier.
+Quand on ne connaît pas GraphQL, on peut avoir l'impression qu'il s'agit d'une technologie complexe à appréhender, voire un peu mystique; peut être à cause d'un éco-système et un tooling très riche (Apollo Server, Apollo Client, Prisma etc). Dans ce billet je vais essayer de montrer que GraphQL est peut être plus simple que vous ne l'imaginez. Les exemples seront en JavaScript car c'est mon langage actuel, mais la théorie vaut pour tous les langages : GraphQL est une [spec](https://graphql.github.io/graphql-spec/) et n'est lié à aucun langage en particulier.
 
 ## Un language de requête simple mais puissant
 
@@ -50,7 +50,7 @@ Simple non ? A noter qu'on obtient uniquement les champs qu'on a demandé dans l
 
 ## Les arguments de champs
 
-Nous avons la possibilité pour chaque champ d'avoir des **arguments**, un peu comme une fonction. Ainsi, pour paginer mes utilisateurs si j'ai beaucoup de résultats, je pourrai écrire:
+Nous avons la possibilité pour chaque champ d'avoir des **arguments**, un peu comme une fonction. Ainsi, pour paginer mes utilisateurs si j'ai beaucoup de résultats, je pourrais écrire:
 
 ```graphql
 {
@@ -92,16 +92,9 @@ Poussons le bouchon un peu plus loin avec une relation: je voudrais maintenant a
 
 On peut apercevoir là tout ce qu'il possible à faire avec une seule requête GraphQL, avec une syntaxe qui reste très lisible même quand les choses se corsent.
 
-L'équivalent en REST serait quelque chose comme ça, en suivant la spec JSON API:
+## Côté client : Graphql c'est juste une requête HTTP POST
 
-> GET https://localhost:4000/api/users?include=posts&fields[users]=email,picture&fields[posts]=picture&page[limit]=20
-
-Mais il manque dans la requête GET ci-dessus les arguments pour les dimensions de l'image, la limite des posts et le contenu tronqué: je ne sais pas si la spec JSON API permet de faire cela de manière standardisée (envoie moi un email à yann@yineo.fr si tu sais)
-
-
-## Côté client : Graphql c'est juste une requête HTTP Post
-
-Fondamentalement, tout ce dont vous avez besoin pour envoyer une requête GraphQL à un serveur GraphQL, c'est de faire une requête HTTP en POST. 
+Tout ce dont vous avez besoin pour envoyer une requête GraphQL à un serveur GraphQL, c'est de faire une requête HTTP en POST.
 
 Voici comment nous pouvons envoyer notre première requête pour récupérer les mails des users avec un simple `fetch` :
 
@@ -121,7 +114,7 @@ Voici comment nous pouvons envoyer notre première requête pour récupérer les
     .then(result => console.log("result", result));
 ```
 
-Il existent des clients GraphQL plus ou moins complexes (Apollo étant le plus connu) mais ils sont surtout là pour ajouter des fonctionnalités ou des helpers (pour le cache client, la gestion du token etc), ils ne sont indispensables en soi et ne font pas partie de GraphQL. J'ai déjà réalisé des projets en utilisant simplement *axios* pour faire mes requêtes GraphQL, qui est la librairie que j'utilisais auparavant quand j'interrogerais des API REST.
+Il existent des clients GraphQL plus ou moins complexes (Apollo étant le plus connu) mais ils sont surtout là pour ajouter des fonctionnalités ou des helpers (pour le cache client, la gestion du token etc), ils ne sont pas indispensables en soi et ne font pas partie de GraphQL. J'ai déjà réalisé des projets en utilisant simplement *axios* pour faire mes requêtes GraphQL, qui est la librairie que j'utilisais auparavant quand j'interrogerais des API REST.
 
 ## Côté serveur : créer un schema avec ses revolvers.
 
