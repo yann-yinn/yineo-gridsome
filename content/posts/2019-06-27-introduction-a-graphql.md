@@ -13,7 +13,7 @@ Quand on ne connaît pas GraphQL, on peut avoir l'impression qu'il s'agit d'une 
 
 GraphQL propose une manière ingénieuse et intuitive d'interroger votre API, dans un format proche du JSON.
 
-Par exemple, si je veux obtenir tous les adresses emails des utilisateurs de mon site, je peux écrire la requête suivante:
+Par exemple, si je veux obtenir toutes les adresses emails des utilisateurs de mon site, je peux écrire la requête suivante:
 
 ```graphql
 {
