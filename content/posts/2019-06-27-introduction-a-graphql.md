@@ -303,7 +303,6 @@ Il y a bien d'autres fonctionnalités intéressantes de GraphQL à explorer, mai
 - L'explorateur Graph**i**ql permet aussi de tester vos requêtes et explorer votre API bien plus facilement et rapidement qu'avec POSTMAN ou CURL.
 - Tirer parti de la puissance des arguments pour les champs
 - Alléger certains JSON en demandant uniquement les champs dont vous avez besoin
-- Des métriques sur votre API avec Apollo Engine si vous en avez besoin
 
 
 
