@@ -3,7 +3,7 @@
     <nav class="navbar">
       <div class="navbar-brand">
         <span class="navbar-item is-hidden-desktop">
-          <img alt="Logo Yineo" src="/src/Yineo_logo_mobile.svg" class="logo-mobile">
+          <img alt="Logo Yineo" src="/src/Yineo_logo_mobile.svg" class="logo-mobile" />
         </span>
 
         <div
@@ -12,7 +12,7 @@
           class="navbar-burger"
           data-target="app-menu"
         >
-          <img alt="Logo Yineo" src="/src/Yineo_burger.svg" class="yineo-burger">
+          <img alt="Logo Yineo" src="/src/Yineo_burger.svg" class="yineo-burger" />
         </div>
       </div>
 
@@ -23,6 +23,11 @@
           <g-link @click="mobileMenuIsOpened = false" to="/" class="navbar-item">Home</g-link>
           <g-link @click="mobileMenuIsOpened = false" to="/blog" class="navbar-item">Blog</g-link>
           <g-link @click="mobileMenuIsOpened = false" to="/cv" class="navbar-item">CV</g-link>
+          <g-link
+            @click="mobileMenuIsOpened = false"
+            to="/popcorn-reseau-developpeurs-freelance-a-nantes"
+            class="navbar-item"
+          >🍿 Popcorn Nantes</g-link>
           <g-link @click="mobileMenuIsOpened = false" to="/contact" class="navbar-item">Contact</g-link>
         </div>
       </div>
