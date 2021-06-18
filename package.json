@@ -14,7 +14,7 @@
     "axios": "^0.18.0",
     "gridsome": "0.5.7",
     "gridsome-plugin-remark-shiki": "^0.2.0",
-    "striptags": "^3.1.1"
+    "striptags": "^3.2.0"
   },
   "devDependencies": {
     "@sendgrid/mail": "^6.3.1",
